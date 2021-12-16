@@ -40,8 +40,8 @@ const EditMovieForm = (props) => {
 		})
 		.catch(err => {
 			console.log(err)
-		})
-	}, [id])
+		});
+	}, []);
 	
 
     const handleSubmit = (e) => {
@@ -49,7 +49,7 @@ const EditMovieForm = (props) => {
         axios.put(`http://localhost:9000/api/movies/${id}`, movie)
             .then(res=>{
                 props.setMovies(res.data);
-                push(`/movies/${movie.id}`);
+                push(`/movies/${id}`);
 			})
 			.catch(err=>{
 				console.log(err);
