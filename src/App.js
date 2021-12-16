@@ -27,11 +27,11 @@ const App = (props) => {
   }, []);
 
   const deleteMovie = (id)=> {
-    axios.delete(`http://localhost:9000/api/movies/${id}`)
-    .then(res => {
+    //axios.delete(`http://localhost:9000/api/movies/${id}`)
+    //.then(res => {
         setMovies(movies.filter(item => item.id !== Number(id)))
-    })
-        .catch(err => console.error(err));
+   // })
+       // .catch(err => console.error(err));
   }
 
 
