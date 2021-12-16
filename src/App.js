@@ -27,7 +27,7 @@ const App = (props) => {
   }, []);
 
   const deleteMovie = (id)=> {
-              setMovies(movies.filter(item => item.id !== Number(id)))
+        setMovies(movies.filter(item => item.id !== Number(id)))
    
   }
 
@@ -54,7 +54,7 @@ const App = (props) => {
             </Route>
 
             <Route path="/movies/:id">
-              <Movie deleteMovie={deleteMovie}/>
+              <Movie setMovies={setMovies} deleteMovie={deleteMovie}/>
             </Route>
 
             <Route path="/movies">
